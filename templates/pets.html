@@ -12,8 +12,8 @@
         <img src="{{ pet.photo_url}}" alt="Pet Picture">
         <a href="">{{ pet.name }}</a>
 
-        {% if {{ pet.available = True}} %}
-
+        {% if pet.available == True %}
+        
         <b>Available</b>
 
         {% endif %}
