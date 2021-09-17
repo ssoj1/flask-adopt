@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %} Pets {% endblock %}
+
+{% block content %}
+
+<h1>All Pets</h1>
+
+<ul>
+    {% for pet in pets %}
+    <li>
+        <img src="{{ pet.photo_url}}" alt="Pet Picture">
+        <a href="">{{ pet.name }}</a>
+
+        {% if {{ pet.available = True}} %}
+
+        <b>Available</b>
+
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+<button><a href="/add">Add Pet</a></button>
+{% endblock %}
